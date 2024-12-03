@@ -18,7 +18,10 @@ public class Player {
 
     // Method for the player to draw a card from the deck and add it to their hand.
     public void drawCard(Deck deck) {
-        hand.add(deck.drawCard());
+        Card drawnCard = deck.drawCard();
+        if (drawnCard != null) {
+            hand.add(drawnCard);
+        }
     }
 
     // Method to get the list of cards in the player's hand.
@@ -33,9 +36,9 @@ public class Player {
 
     // Method for the player to play a card from their hand.
     public void playCard(int index) {
-        // Remove the card from the hand if the index is valid.
         if (index >= 0 && index < hand.size()) {
-            hand.remove(index);
+            Card playedCard = hand.remove(index);
+            System.out.println(name + " played: " + playedCard);
         }
     }
 }

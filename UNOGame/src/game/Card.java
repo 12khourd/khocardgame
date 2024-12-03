@@ -1,32 +1,32 @@
 package game;
 
-// The Card class represents a single card with a color and a value.
 public class Card {
-    // Fields to store the color and value of the card.
     private String color;
     private String value;
 
-    // Constructor to initialize the card with a specified color and value.
+    // Constructor to initialize the card with color and value
     public Card(String color, String value) {
         this.color = color;
         this.value = value;
     }
 
-    // Getter method to retrieve the color of the card.
+    // Getter for color
     public String getColor() {
         return color;
     }
 
-    // Getter method to retrieve the value of the card.
+    // Getter for value
     public String getValue() {
         return value;
     }
 
-    // Overrides the toString method to return a string representation of the card.
+    // Overridden toString() method to represent the card as a string
     @Override
     public String toString() {
         return color + " " + value;
     }
+
+    // Default applyEffect method in the base Card class
+    public void applyEffect(Game game) {
+    }
 }
-
-
